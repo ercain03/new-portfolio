@@ -11,9 +11,9 @@ projectsView.handleMainNav = function() {
   $('.main-nav .nav-li:first').click();
 };
 
-// $(document).ready(function() {
-//   projectsView.handleMainNav();
-//   $('.nav-li').click(function() {
-//     $('.top-menu').toggleClass('expand');
-//   });
-// });
+$(document).ready(function() {
+  projectsView.handleMainNav();
+  $('.nav-li').click(function() {
+    $('.top-menu').toggleClass('expand');
+  });
+});
