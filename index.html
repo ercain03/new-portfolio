@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles/base.css" />
+    <link rel="stylesheet" type="text/css" href="styles/layout.css" />
+    <link rel="stylesheet" type="text/css" href="styles/modules.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One|Permanent+Marker" rel="stylesheet" type="text/css">
+    <title>Tre Cain -- Portfolio</title>
+    <script id="article-template" type="text/x-handlebars-template">
+          <h1>{{title}}</h1>
+          <a href="{{projectUrl}}" class="project-link">Go to Project</a>
+          <p class="publish-date">{{publishedOn}}</p>
+          <div class="article-image">{{{imageUrl}}}</div>
+          <section class="article-body">{{{body}}}</section>
+          <div class="float-clear"></div>
+      </script>
+
+  </head>
+  <body>
+    <header>
+      <nav class="main-nav">
+
+        <ul class="top-menu">
+          <li class="nav-li" data-content="home"><a href="#" class="nav-item">HOME,</a></li>
+          <li class="nav-li" data-content="about"><a href="#" class="nav-item">ABOUT</a></li>
+          <li id="my-name">TRE CAIN</li>
+          <li class="nav-li" data-content="articles"><a href="#" class="nav-item">PROJECT</a></li>
+          <li class="nav-li" data-content="nav-item"><a href="#" class="nav-item">CONTACTS</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+
+      <section id="pic" class="toggle">
+        <img src="images/new-hello.jpg" alt="hallway">
+      </section>
+      <section id="articles" class="page-content"></section>
+    </main>
+    <footer>
+      &copy; 2016 Tre Cain
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="scripts/project.js"></script>
+    <script src="scripts/projectView.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
