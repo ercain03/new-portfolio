@@ -1,15 +1,8 @@
-ul li {
-  display: inline-block;
-  margin: 1em 1em .5em .5em;
+body {
   font-family: 'Poiret One', cursive;
 }
 
-header {
-  margin-bottom: 30px;
-}
-
-footer {
-  text-align: center;
-  margin-top: 30px;
-  height: 30px;
+a {
+  text-decoration: none;
+  color: black;
 }

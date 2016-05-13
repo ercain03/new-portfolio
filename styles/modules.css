@@ -16,6 +16,7 @@ img {
   margin: 0 auto;
   width: 100%;
 }
-.clearfix {
-  clear: both;
+ul li {
+  display: inline-block;
+  margin: .5em 1em .5em .5em;
 }

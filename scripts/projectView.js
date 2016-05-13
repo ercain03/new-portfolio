@@ -5,7 +5,6 @@ projectsView.handleMainNav = function() {
     e.preventDefault();
     $('.page-content').hide();
     var $clickEvent = $(this);
-    console.log($clickEvent);
     $('[id="' + $clickEvent.attr('data-content') + '"]').show();
     $('.top-menu').removeClass('expand');
   });

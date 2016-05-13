@@ -4,18 +4,22 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" href="styles/reset.css" /> -->
     <link rel="stylesheet" type="text/css" href="styles/base.css" />
     <link rel="stylesheet" type="text/css" href="styles/layout.css" />
     <link rel="stylesheet" type="text/css" href="styles/modules.css" />
     <link href="https://fonts.googleapis.com/css?family=Poiret+One|Permanent+Marker" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
     <title>Tre Cain -- Portfolio</title>
     <script id="article-template" type="text/x-handlebars-template">
+      <div class="projects-list">
           <h1>{{title}}</h1>
-          <a href="{{projectUrl}}" class="project-link">Go to Project</a>
           <p class="publish-date">{{publishedOn}}</p>
           <div class="article-image">{{{imageUrl}}}</div>
+          <a href="{{projectUrl}}" class="project-link">Click to View</a>
           <section class="article-body">{{{body}}}</section>
           <div class="float-clear"></div>
+      </div>
       </script>
 
   </head>
