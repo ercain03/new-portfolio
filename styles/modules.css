@@ -20,3 +20,15 @@ ul li {
   display: inline-block;
   margin: .5em 1em .5em .5em;
 }
+
+.blur img {
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+.blur img:hover {
+  -webkit-filter: blur(5px);
+}
