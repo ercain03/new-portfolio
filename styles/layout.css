@@ -1,0 +1,14 @@
+.template {
+  display: none;
+  text-align: center;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#articles {
+  text-align: center;
+}
