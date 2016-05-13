@@ -1,14 +1,27 @@
-.template {
-  display: none;
-  text-align: center;
-  margin: 0 auto;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
 #articles {
   text-align: center;
+}
+
+#articles img {
+  height: 50%;
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+#articles h1 {
+  color: #13ACE8;
+}
+
+.article-body {
+  text-align: justify;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  height: 30px;
 }
