@@ -1,10 +1,11 @@
 main {
   margin-top: 0;
 }
+
 nav ul {
   margin: 0 auto;
   text-align: center;
-  width: 60%;
+  width: 70%;
 }
 #my-name {
   font-size: 50px;
