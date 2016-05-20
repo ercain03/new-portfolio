@@ -1,6 +1,6 @@
 var allProjects = [
   {
-    title: 'Buss Mall',
+    title: 'Bus Mall',
     category: 'Sales',
     author: 'Tre Cain',
     projectUrl: 'https://github.com/ercain03/bus-mall',

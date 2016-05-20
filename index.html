@@ -4,7 +4,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" type="text/css" href="styles/reset.css" /> -->
+    <link rel="stylesheet" type="text/css" href="vendor/reset.css">
     <link rel="stylesheet" type="text/css" href="styles/base.css" />
     <link rel="stylesheet" type="text/css" href="styles/layout.css" />
     <link rel="stylesheet" type="text/css" href="styles/modules.css" />
@@ -19,13 +19,14 @@
           <a href="{{projectUrl}}" class="project-link">Click to View</a>
           <section class="article-body">{{{body}}}</section>
       </div>
-      </script>
+    </script>
 
   </head>
   <body>
+
     <header>
       <nav class="main-nav">
-
+        <div class="hamburger-icon"></div>
         <ul class="top-menu">
           <li class="nav-li" data-content="home"><a href="#" class="nav-item">HOME,</a></li>
           <li class="nav-li" data-content="about"><a href="#" class="nav-item">ABOUT</a></li>
@@ -38,17 +39,22 @@
     <main>
 
       <section id="pic" class="toggle">
-        <img src="images/new-hello4.jpg" alt="hallway">
+        <img class="middle-image" src="images/new-hello4.jpg" alt="hallway">
       </section>
       <section id="articles" class="page-content"></section>
     </main>
+
     <footer>
       &copy; 2016 Tre Cain
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-    <script src="scripts/project.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <!-- <script src="scripts/project.js"></script> -->
     <script src="scripts/projectView.js"></script>
     <script src="scripts/app.js"></script>
+    <script>
+       Project.fetchAll(projectsView.initProjectContent);
+    </script>
   </body>
 </html>
