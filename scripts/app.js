@@ -4,6 +4,7 @@
       this[properties] = obj[properties];
     }
   }
+
   Project.all = [];
 
   Project.prototype.toHtml = function() {
@@ -13,12 +14,13 @@
   };
 
   Project.populateAll = function (dataPassedIn) {
+    console.log(dataPassedIn);
     dataPassedIn.forEach(function(obj) {
       Project.all.push(new Project(obj));
     });
   };
 
-  Project.getAll = function(next) {
+  Project.loadAll = function(next) {
     $.getJSON('data/listOfProj.json', function(responseData) {
       Project.loadAll(responseData);
       localStorage.localData = JSON.stringify(responseData);
@@ -27,7 +29,7 @@
   };
 
   Project.fetchAll = function(next) {
-    if (localStorage.localData) {
+    if (localStorage.listOfProj) {
       $.ajax({
         type: 'HEAD',
         url: 'data/listOfProj.json',
@@ -37,13 +39,13 @@
             eTag = localStorage.eTag;
             Project.getAll(next);
           } else {
-            Project.loadAll(JSON.parse(localStorage.localData));
+            Project.loadAll(JSON.parse(localStorage.listOfProj));
             next();
           }
         }
       });
     } else {
-      Project.getAll(next);
+      Project.loadAll (next);
     }
   };
   module.Project = Project;

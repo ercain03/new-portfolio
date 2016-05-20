@@ -12,47 +12,81 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
     <title>Tre Cain -- Portfolio</title>
     <script id="article-template" type="text/x-handlebars-template">
-      <div class="blur projects-list">
+      <article class="clearfix" data-author="{{author}}" data-category="{{category}}">
+        <header>
           <h1>{{title}}</h1>
-          <p class="publish-date">{{publishedOn}}</p>
-          <div class="article-image">{{{imageUrl}}}</div>
-          <a href="{{projectUrl}}" class="project-link">Click to View</a>
-          <section class="article-body">{{{body}}}</section>
-      </div>
+          <div class="byline">
+            By <address><a href="{{authorUrl}}">{{author}}</a></address>
+            {{publishStatus}}
+          </div>
+        </header>
+        <section class="article-body">{{{body}}}</section>
+        <div class="article-image">{{{imageUrl}}}</div>
+        <a href="#" class="read-on">Read on &rarr;</a>
+      </article>
     </script>
-
   </head>
   <body>
 
-    <header>
+    <header class="site-header clearfix">
       <nav class="main-nav">
-        <div class="hamburger-icon"></div>
-        <ul class="top-menu">
-          <li class="nav-li" data-content="home"><a href="#" class="nav-item">HOME,</a></li>
-          <li class="nav-li" data-content="about"><a href="#" class="nav-item">ABOUT</a></li>
+        <ul class="icon-menu">
+          <li class="nav-li" data-content="articles"><a href="#" class="nav-item">Home</a></li>
+          <li class="nav-li" data-content="about"><a href="#" class="nav-item">About</a></li>
           <li id="my-name">TRE CAIN</li>
-          <li class="nav-li" data-content="articles"><a href="#" class="nav-item">PROJECT</a></li>
-          <li class="nav-li" data-content="nav-item"><a href="#" class="nav-item">CONTACTS</a></li>
+          <li class="nav-li" data-content="articles"><a href="#" class="nav-item">Projects</a></li>
+          <li class="nav-li" data-content="nav-item"><a href="#" class="nav-item">Contact</a></li>
         </ul>
       </nav>
     </header>
     <main>
-
       <section id="pic" class="toggle">
         <img class="middle-image" src="images/new-hello4.jpg" alt="hallway">
       </section>
-      <section id="articles" class="page-content"></section>
-    </main>
 
+      <section id="articles" class="page-content">
+        <div>
+          <ul id="filters">
+            <li>
+              <select id="category-filter">
+                <option value="">-- Filter by Categories --</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="about" class="tab-content">
+        <header>
+          <h2>Who is Tre?</h2>
+        </header>
+        <section>
+          <h1>A little something about me:</h1>
+          <ul>
+            <li>I love to code.</li>
+            <li>I am interested in all sports, but my favorite is basketball.</li>
+            <li>Helping others is what really gets me going.</li>
+          </ul>
+        </section>
+      </section>
+  </main>
     <footer>
       &copy; 2016 Tre Cain
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-    <!-- <script src="scripts/project.js"></script> -->
     <script src="scripts/projectView.js"></script>
-    <script src="scripts/app.js"></script>
+    <script src="scripts/app.js"></script> -->
+
+    <script src="vendor/scripts/jquery-2.1.4.js"></script>
+    <script src="vendor/scripts/handlebars.js"></script>
+    <script src="vendor/scripts/marked.js"></script>
+    <!-- DONE: Include the script files we need, that give us an API to the WebSQL feature of Chrome: -->
+    <script src="vendor/scripts/html5sql.js"></script>
+    <script src="vendor/scripts/webdb.js"></script>
+    <script src="scripts/article.js"></script>
+    <script src="scripts/articleView.js"></script>
+
     <script>
        Project.fetchAll(projectsView.initProjectContent);
     </script>
